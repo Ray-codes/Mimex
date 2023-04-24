@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayoutSigns"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".signActivity"
+    tools:openDrawer="start">
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/navigationViewSigns"
+        app:headerLayout="@layout/header_file"
+        app:menu="@menu/side_menu"
+        android:layout_gravity="start"
+        android:background="@color/blue" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inconsolata"
+                android:gravity="center"
+                android:text="@string/footer1"
+                android:textSize="12dp"
+                android:textColor="@color/black"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/footer2"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:fontFamily="@font/inconsolata"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+    </com.google.android.material.navigation.NavigationView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarSigns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="MimeX"
+                        android:textSize="38dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:textStyle="bold"
+                        android:textAllCaps="false"
+                        android:gravity="center"
+                        android:layout_marginRight="60dp"/>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/blue_background"
+
+            android:padding="10dp">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp">
+                <androidx.cardview.widget.CardView
+                    android:layout_marginTop="85dp"
+                    android:id="@+id/WhatsUrName"
+                    android:layout_width="350dp"
+                    android:layout_height="90dp"
+                    app:cardBackgroundColor="@color/blue"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="3dp"
+                    app:layout_constraintBottom_toTopOf="@+id/WhereULive"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:padding="15dp"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:text="What is your name ?"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="25dp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginTop="45dp"
+                    android:id="@+id/WhereULive"
+                    android:layout_width="350dp"
+                    android:layout_height="90dp"
+                    app:cardBackgroundColor="@color/blue"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="3dp"
+                    app:layout_constraintBottom_toTopOf="@+id/HowRU"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/WhatsUrName"
+                    app:layout_constraintVertical_bias="0.5">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:padding="15dp"
+                        android:text="Where do you live ?"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="25dp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginTop="45dp"
+                    android:id="@+id/HowRU"
+                    android:layout_width="350dp"
+                    android:layout_height="90dp"
+                    app:cardBackgroundColor="@color/blue"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="3dp"
+                    app:layout_constraintBottom_toTopOf="@+id/HowOldRU"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/WhereULive"
+                    app:layout_constraintVertical_bias="0.5">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:padding="15dp"
+                        android:text="How are you ?"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="25dp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginTop="45dp"
+                    android:id="@+id/HowOldRU"
+                    android:layout_width="350dp"
+                    android:layout_height="90dp"
+                    app:cardBackgroundColor="@color/blue"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="3dp"
+                    app:layout_constraintBottom_toTopOf="@+id/HowCanIHelpU"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/HowRU"
+                    app:layout_constraintVertical_bias="0.5">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:padding="15dp"
+                        android:text="How old are you ?"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="25dp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginTop="45dp"
+                    android:id="@+id/HowCanIHelpU"
+                    android:layout_width="350dp"
+                    android:layout_height="90dp"
+                    app:cardBackgroundColor="@color/blue"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="3dp"
+                    app:layout_constraintBottom_toTopOf="@+id/ThankingYou"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/HowOldRU"
+                    app:layout_constraintVertical_bias="0.5">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:padding="15dp"
+                        android:text="How Can I Help You ?"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="25dp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginTop="45dp"
+                    android:id="@+id/ThankingYou"
+                    android:layout_width="350dp"
+                    android:layout_height="90dp"
+                    app:cardBackgroundColor="@color/blue"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="3dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/HowCanIHelpU"
+                    app:layout_constraintVertical_bias="0.5">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:padding="15dp"
+                        android:text="Thank You !"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="25dp" />
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -2,4 +2,6 @@
     <string name="app_name">MimeX</string>
     <string name="navigationOpen">Open Navigation drawer </string>
     <string name="navigationClose">Close Navigation drawer </string>
+    <string name="footer1">Developed by Faizan, Kaif, Raiyaan and Junaid under the guidance of Dr. Ayesha Taranum</string>
+    <string name="footer2">Version 1.0.0</string>
 </resources>

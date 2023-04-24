@@ -2,10 +2,13 @@
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context=".MainActivity"
-    android:id="@+id/drawerLayout">
+    tools:openDrawer="start">
+
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
@@ -13,46 +16,131 @@
         app:headerLayout="@layout/header_file"
         app:menu="@menu/side_menu"
         android:layout_gravity="start"
-        android:background="@color/blue"
-        />
+        android:background="@color/blue" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp"
+            android:padding="5dp">
 
-    <RelativeLayout
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inconsolata"
+                android:gravity="center"
+                android:text="@string/footer1"
+                android:textSize="12dp"
+                android:textColor="@color/black"
+               />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/footer2"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:fontFamily="@font/inconsolata"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+    </com.google.android.material.navigation.NavigationView>
+
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <org.opencv.android.JavaCameraView
+            android:id="@+id/frame_Surface1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue">
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/blue">
-
-                <LinearLayout
+                android:layout_height="wrap_content">
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="start">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/quicksand_medium"
-                        android:gravity="center"
-                        android:text="MimeX"
-                        android:textAllCaps="false"
-                        android:textColor="@color/black"
-                        android:textSize="38dp"
-                        android:textStyle="bold"
-                        android:layout_marginRight="55dp"/>
-
-
-
-                </LinearLayout>
-            </androidx.appcompat.widget.Toolbar>
-
+                    android:layout_height="wrap_content"
+                    android:text="MimeX"
+                    android:textSize="38dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:gravity="center"
+                    android:layout_marginRight="60dp"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
         </com.google.android.material.appbar.AppBarLayout>
-    </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/change_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:textStyle="bold" />
 
+            <LinearLayout
+                android:id="@+id/bottom_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="bottom"
+                android:background="@color/black"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/add_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="5dp"
+                    android:text="Add"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/clear_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="clear"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/tts_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="tts"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/space_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="space"
+                    android:textAllCaps="false" />
+
+                 </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
 </androidx.drawerlayout.widget.DrawerLayout>
+
