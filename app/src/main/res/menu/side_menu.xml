@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/signs_menu"
+            android:icon="@drawable/signs_symbol"
+            android:title="Signs" />
+        <item
+            android:id="@+id/translator_menu"
+            android:icon="@drawable/translate_symbol"
+            android:title="Translator" />
+        <item
+            android:id="@+id/guide_menu"
+            android:icon="@drawable/guide_symbol"
+            android:title="Guide" />
+        <item
+            android:id="@+id/about_menu"
+            android:icon="@drawable/about_symbol"
+            android:title="About" />
+        <item
+            android:id="@+id/rate_menu"
+            android:icon="@drawable/rate_symbol"
+            android:title="Rate us" />
+    </group>
+</menu>
